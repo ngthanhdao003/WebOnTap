@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Ôn môn web</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <style>
+        a.hover:hover{
+            color: yellowgreen;
+            text-decoration: none;
+        }
+        a.active:active{
+            color: violet;
+            text-decoration: none;
+        }
+        a.visit:visited{
+            color: turquoise;
+        }
+        input.focus:focus{
+            background-color:black;
+        }
+    </style>
+</head>
+<body class="fs-4 py-5">
+    <!-- HTML -->
+    <h1 class="text-center m-4 text-primary">Phần 1 HTML cơ bản</h1>
+    <hr>
+    <div class="container">
+        <ol>
+            <li class="mb-2">
+                <span class="fw-bold">Tổng quan về lập trình Web:</span>
+                <ul>
+                    <li>Về cơ bản mọi trang web đều được lưu trữ tại Web Server (hiễu đơn giản là máy tính có  kết nối Internet sẽ 
+                        cho phép lưu trữ và trả ra kết quả, các tập tin khi nhận yêu cầu).</li>
+                    <li>Khi chúng ta truy cập trang Web tức là gữi yêu cầu đến Web Sever (request). Sau đó Web Sever sẽ gữi lại
+                        các tập tin hình thành nên Web xuống trình duyệt (Reponse). </li>
+                </ul>
+            </li>
+            <li class="mb-2">
+                <span class="fw-bold">HTML là gì: </span> viết tắt của Hypertext markup language, không phải là ngôn ngữ
+                 lập trình mà là các thẻ (element) để đánh dấu các đoạn văn bản hiển thị trên web.  
+            </li>
+            <li class="mb-2">
+                <span class="fw-bold">2 loại element trong HTML: </span> 
+                <ul>
+                    <li>
+                        Loại có ngữ nghĩa (sementic tap): Là loại được định dạng và thể hiện rõ ngữ nghĩa từ trước như 
+                         "header" "footer" "h1-h5" "section" "a" "p" ,......
+                    </li>
+                    <li>
+                        Loại không ngữ nghĩa (non sementic tap): Có 2 thẻ là "div" và "span"  .
+                    </li>
+                </ul>
+            </li>
+            <li class="mb-2">
+                <span class="fw-bold"> Biểu mẫu form: </span> 
+                <p class="m-4">
+                    <input type="text" class="" value="" placeholder="text style" required>
+                    <input type="submit" value="Submit button" class="btn btn-primary mx-3">
+                    <input type="checkbox" name="chk1" id="chk1" value="Checkbox"> Checkbox
+                    <input type="radio" name="radio" id="" value="radio1"> Radio1 
+                    <input type="radio" name="radio" id="" checked value="radio2"> Radio2
+                </p>
+            </li>
+            <li class="mb-2">
+                <span class="fw-bold"> Table: </span> 
+                <p class="m-4">
+                   <table class="text-center table">
+                        <tr>
+                            <th>STT</th>
+                            <th>Name</th>
+                            <th>Age</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Nguyen Thanh Dao</td>
+                            <td>32</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Nguyen Thanh Dao</td>
+                            <td>32</td>
+                        </tr>
+                   </table>
+                </p>
+            </li>
+        </ol>
+    </div>
+    <!-- CSS -->
+    <h1 class="text-center m-4 text-danger">Phần 2 CSS</h1>
+    <hr>
+    <div class="container">
+        <ol class="">
+            <li class="mb-2">
+                <span class="fw-bold">CSS (Cascading Style Sheets) là gì:</span>
+                là ngôn ngữ để tìm và định dạng các phần tử được tạo ra bởi HTML.
+            </li>
+            <li class="mb-2">
+                <span class="fw-bold">Có 3 cách để đưa CSS vào HTML:</span> Inline CSS, Internal CSS, External CSS. 
+                    Trong đó External CSS là được sữ dụng nhiều nhất.
+                    <ul>
+                        <li>
+                            Inline CSS: Được dùng cho chính xác thẻ HTML bằng thuộc tính Style.
+                        </li>
+                        <li>Internal CSS: Được sữ dụng trong chính trang HTML cụ thẻ là phần head và trong thẻ style.</li>
+                        <li>External CSS: Đặt CSS vào file khác và inlcude vào HTML trong phần Head và trong thẻ link.</li>
+                    </ul>
+            </li>
+            <li class="mb-2">
+                <p>
+                    <span style="font-weight: bold;">CSS Selector: </span>
+                    cho phép nhắm mục tiêu tới các phần tử HTML để áp dụng CSS cho chúng.
+                </p>
+                <p>Có 8 loại CSS selector: Basic CSS selector, descenant CSS selector, multiple CSS selector,
+                 Combination CSS selector, cibling CSS selector, pseudo CSS selector, attribute css selector. 
+                 <ol>
+                    <li><span class="fw-bold">Basic CSS selector :</span> Sữ dụng chọn element id / class / *. </li>
+                    <li><span class="fw-bold">Descenant CSS selector: </span>chọn hậu duệ bất kỳ của bất kỳ phần tử nào.
+                        <ul>
+                            <li>A . B : chọn bất kỳ phần tử nào là hậu duệ của A.</li>
+                            <li>A > B : chọn phần tử trực tiếp của B.</li>
+                            <li>A * : chọn tất cả các hậu duệ của A</li>
+                        </ul>
+                    </li>
+                    <li><span class="fw-bold">Multiple CSS selector: </span> .A , .B , .C.... Để chọn nhiều phần tử class / id.</li>
+                    <li><span class="fw-bold">Combination CSS selector: </span> cho phép chứa cả phần tử AB. p.active</li>
+                    <li><span class="fw-bold">Cibling CSS selector: </span> nhắm chọn các phần tử anh chị em. A + B : liền kề. A ~ B :
+                    không giới hạn phần tử đầu.</li>
+                    <li><span class="fw-bold">Pseudo CSS selector: </span> 
+                        <ul>
+                            <li>A:first-child chọn tới phần tử con đầu tiên (A phải có cha).</li>
+                            <li>A:last-child chọn phần tử con cuối cùng.</li>
+                            <li>A:only-child chọn  tất cả A là  con duy nhất của cha mẹ nó.</li>
+                            <li>A:nth-child(n) chọn từng mục tiêu là con thứ n của cha mẹ nó.</li>
+                            <li>A:nth-last-child(n) chọn phần tử là con thứ n của cha mẹ nó từ dưới lên.</li>
+                            <li>A:not(B) chọn các phần từ A mà không phải là B.</li>
+                        </ul>
+                    </li>
+                    <li><span class="fw-bold">Attribute css selector: </span>sữ dụng để chọn thuộc tính HTML.
+                        <ul>
+                            <li>A[B] bộ chọn các phần tử A có thuộc tính B. div[for]</li>
+                            <li>A[B="C"] chọn phần tử A có thuộc tính B và giá trị C. div[for="Chocolate"]</li>
+                            <li>A[B^="C"] chọn phần tử A có thuộc tính B và giá trị bắt đầu là C. div[for^="Cho"]</li>
+                            <li>A[B$=""] chọn phần tử A có thuộc tính là B giá trị kết thúc là C. div[for$="late"]</li>
+                            <li>A[B*="C"] chọn phần tử A có thuộc tính là B giá trị có chứa giá trị C. div[for*="cola"]</li>
+                        </ul>
+                    </li>
+                    
+                </ol>
+                </p>
+            </li>
+            <li class="mb-2">
+                <p>
+                    <span style="font-weight: bold;">Chữ đậm</span>
+                    <span style="text-decoration:transparent">Chữ hoa</span>
+                    <span style="text-decoration:underline">Chữ thường</span>
+                    <span style="text-decoration: underline;">Chữ gạch dưới</span>
+                    <span style="font-style:italic">Chữ nghiêng</span>
+                </p>
+            </li>
+            <li class="mb-2">
+                <p>
+                    <a href="#" target="_blank">HyperLink new window</a>
+                    <a href="#" style="text-decoration:none">HyperLink none underline</a>
+                    <a href="#" class="hover" >Hover</a>
+                    <a href="#" class="active">HyperLink Active</a>
+                    <a href="#" class="visit">Hyperlink Visit</a>
+                   <input type="text" class="focus form-control" placeholder="Focus">
+                </p>
+            </li>
+            <li class="mb-2">
+                <p>
+                    <p href="#" target="_blank"><span class="fw-bold">Các dạng BOXS:</span>  có 3 loại block,inline,inline-block 
+                        được quy định bởi thuộc tính Display.
+                    </p>
+                   <ul>
+                    <li>Block: Có thẻ đặt thuộc tính Width, Height và sẽ bắt đầu một dòng mới. Mặc định chiếm toàn bộ chiều rộng. </li>
+                    <li>Inline: Không thể đặt thuộc tính Width, Height. Chỉ chiếm đủ chiều rộng và không chiếm một dồng mới.</li>
+                    <li>Inline-block: Có tính chất giống Inline tuy nhiên có thể đặt Width, Height như Block.</li>
+                   </ul>
+                </p>
+            </li>
+            <li class="mb-2">
+                <p>
+                    <p href="#" target="_blank"><span class="fw-bold">Flex Box:</span> gíup bạn có thể điều chỉnh các thành phần có trong container.
+                    </p>
+                   <ul>
+                     <li>Thuộc tính cho flex-container:</li>
+                     <ul>
+                        <li>flex-gab: px => khoảng cách giữa các items.</li>
+                        <li>flex-direction: row | colum | row reverse |  => colum reverse định phương của trục chính.</li>
+                        <li>flex-wrap: nowrap | wrap | wrap reverse => cho các items xuống dòng nếu không có khoảng trống cho toàn bộ items.</li>
+                        <li>justify-content: Căn chỉnh các items theo trục chính.</li>
+                        <li>align-items: Căn chỉnh items theo trục chéo.</li>
+                        <li>align-content: Căn chỉnh theo trực chéo Áp dụng với container nhiều hàng.</li>
+                     </ul>
+                     <li class="mt-3">Thuộc tính cheo flex items:</li>
+                     <ul>
+                        <li>Align-self: stretch | center | strat | end =>  ghi đè lên thuộc tính align-items</li>
+                        <li>flex-grow: 1 => chỉ định items sẽ gấp bao nhiêu so với items khác. </li>
+                        <li>flex-shrink: ngược lại so với flex-grow.</li>
+                        <li>flex-basic: auto => chỉ độ dài ban đầu các items.</li>
+                        <li>order: sắp xếp các items mà không cần thay đổi soure code.</li>
+                    </ul>
+                   </ul>
+                </p>
+            </li>
+            <li class="mb-2"><span class="fw-bold">CSS grid: </span>là  là một trong những cách sử dụng CSS để xây dựng layout cho website.
+                 Khác với CSS Flex-box, nó là công cụ mạnh mẽ thường dùng cho việc phân chia bố cục cho toàn bộ trang web.
+                <ul>
+                    <li>grid-template-columns: value1, value2,…;
+                        <ul>
+                            <li>Các giá trị value 1 ,2 thể hiện giá trị chiều rộng.Mỗi giá trị sẽ ứng với chiều rộng của các cột.</li>
+                            <li>Có thẻ tạo ra bao nhiêu cột tuỳ ý.</li>
+                            <li>grid-template-columns: 1fr 50px 1fr; Cột thứ hai được đặt width giá trị 50px. Cột đầu tiên và cột thứ 3 được đặt giá trị tương đối 1fr,
+                                 hai cột này sẽ chiếm một nửa chiều rộng còn lại của grid-container.</li>
+                            <li>Kích thước của một column hay một row nếu đặt giá trị auto thì nó sẽ chiếm khoảng không gian vừa đủ để hiển thị nội dung trong nó. </li>
+
+
+                        </ul>
+                    </li>
+                    <li>grid-template-rows: value1, value2,…;  tương tụ như trên nhưng theo chiều ngang.</li>
+                    <li>Gab , colum-gap , row-gap : Khoảng cách giữa các itmes.</li>
+                    <li>Khi đã xác định được grid-item, chúng ta có thể dễ dàng đặt item vào các grid-cell trong grid-container bằng hai thuộc tính grid-column và grid-row.
+                        <ul>
+                            <li>grid-column: 1 / 2; xác định vị trí của item trong cột 1</li>
+                            <li>grid-row: 2 / 3; xác định vị trí của item trong hàng 2</li>
+                            <li>Cặp giá trị a / a + x hay a/ span x sẽ xác định được item đó bắt đầu từ đâu và kết thúc tại đâu. Giá trị x sẽ là số cell mà item đó chiếm trong grid-container.</li>
+                        </ul>
+                    </li>
+                    <li>justify-content : Thuộc tính căn chỉnh theo chiều ngang cho grid-container.</li>
+                    <li>align-content: Thuôc tính canh chỉnh theo chiêu dọc.</li>
+                    <li>justyfy-items,align-items: Canh chỉnh toàn bộ items bên trong mỗi cells. </li>
+                    <li>align-self, content-self: Canh chỉnh theo từng items đè lên justify-items và align-items.</li>
+
+                </ul>    
+            </li>
+        </ol>
+    </div>
+    <!-- JavaScript  -->
+    <h1 class="text-center m-4 text-info">Phần 3 JavaScript</h1>
+    <hr>
+    <div class="container">
+        <ol>
+            <li class="m-4">
+                <span class="fw-bold">JavaScript: </span> là ngôn ngữ lập trình bậc cao hướng đối tượng. JS cho phép thêm các hiệu ứng động,
+                 xữ lý tương tác người dùng, điều khiển nội dung HTML CSS.
+                 <ul>
+                    <li>
+                        <span class="fw-bold">Giá trị: </span> là đơn vị nhỏ nhất chứa thông tin có trong JavaScript.
+                    </li>
+                    <li>
+                        <span class="fw-bold">Biến:</span> được dùng để lưu trữ các giá trị và tái sữ dụng nhiều lần.
+                    </li>
+                 </ul>
+            </li>
+            <li class="m-4">
+                <span class="fw-bold">7 kiểu dữ liệu nguyên thuỷ:</span> hay sữ dụng number, string, boolean. Ít sữ dụng: 
+                undefined, null, symbol, bigint. 
+            </li>
+            <li class="m-4">
+                <span class="fw-bold">Cách khai báo biến:</span>
+                <ul>
+                    <li>Let: Dùng để khai báo các biến có  gía trị có thể thay đổi được.</li>
+                    <li>Const: Dùng để khai báo các biến có giá trị không thể thay đổi. </li>
+                    <li>Var: Gần giống như let nhưng đã không còn sữ dụng.</li>
+                </ul>
+            </li>
+            <li class="m-4">
+                <span class="fw-bold">Câu lệnh if/else:</span><span class="mx-5">if(){ ....} else {.....}</span> 
+            </li>
+            <li class="m-4">
+                <span class="fw-bold">Chuyển đổi kiểu và ép kiểu dữ liệu:</span>
+                <ul>
+                    <li>String -> Number : Number(ValueString);</li>
+                    <li>Number -> String : String(Number);</li>
+                    <li>Javascript chỉ có thể chuyển đổi thành ba kiểu: number, string, boolean.</li>
+                    <li>Javascript sẽ chuyển đổi kiểu trong các giá trị để khớp với các giá trị khác để cuối cùng có thể thực hiện phép tính.
+                        <p class="mx-5">
+                            '9' - '5' = 4;<br>
+                            '19' - '13' + '17' = 617;<br>
+                            '19' - '13' + 17 = 23;<br>
+                            '123' < 57 = flase;<br>
+                            5 + 6 + '4' + 9 - 4 - 2 = 1143;
+                        </p>
+                    </li>
+                </ul>
+            </li>
+            <li class="m-4">
+                <span class="fw-bold">Gía trị boolean:</span>
+                <ul>
+                    <li><span class="fw-bold">Gía trị Falsy (được coi là False):  </span> 0, underfined, NULL, NaN, ""</li>
+                    <li><span class="fw-bold">Giá trị Truthy: </span> là True.</li>
+                </ul>
+            </li>
+            <li class="m-4">
+                <span class="fw-bold">Toán tử == , ===</span>
+                <ul>
+                    <li>
+                        <span class="fw-bold">=== :</span> Toán tử === được gọi là toán tử bằng nghiêm ngặt vì nó không thực hiện ép kiểu, vì vậy nó chỉ trả về 
+                        true khi cả 2 giá trị so sánh hoàn toàn giống nhau.  Ví dụ "18" === 18 // return false.
+                    </li>
+                    <li><span class="fw-bold">== :</span>Toán tử == được gọi là toán tử bằng lỏng lẻo vì nó thực hiện ép kiểu trước khi so sánh.
+                         Ví dụ "18" == 18 // return true.
+                    </li>
+                </ul>
+            </li>  
+            <li class="m-4">
+                <span class="fw-bold">Câu lệnh prompt </span>được sử dụng để tạo ra một cửa sổ nhắc nhở, sẽ có một ô input để nhập.
+                <ul>
+                    <li>
+                        Khai báo một prompt: const result = prompt("some question?")
+                    </li>
+                    <li> Biến result sẽ lưu giá trị mà người dùng nhập qua prompt.</li>
+                </ul>
+            </li> 
+            <li class="m-4">
+                <span class="fw-bold">SWITCH</span>
+                <p class="px-5">
+                    SWITCH(){ <br>
+                        case 0 : { <br>
+                            ...<br>
+                        }<br>
+                        .....<br>
+                        break;<br>
+                    }
+                </p>
+            </li>
+            <li class="m-4">
+                <span class="fw-bold">Toán tử ba ngôi</span>
+                <ul>
+                    <li>Toán tử điều kiện còn được gọi là toán tử ba ngôi gồm: điều kiện, hành động if, ngược lại else.</li>
+                    <li>Ví dụ: const kq = age >=18 ? "ok" : "not ok;"</li>
+                </ul>
+            </li>
+            <li>
+                <span class="fw-bold"> Strict Mode:</span> là chế độ đặc biệt mà chúng ta có thể kích hoạt trong JS để viết code thuận tiện và dễ dàng hơn.
+                Trách các sai sót không đáng có. sữ dụng 'use strict' ở đầu js.
+            </li>
+            <li>
+                <span class="fw-bold">Hàm:</span> đơn giản là một đoạn code mà chúng ta có thể sữ dụng lại nhiều lần.
+                <ul>
+                    <li>Khai báo : function name(){ console.log("My name is Dao Nguyen"! ) }</li>
+                    <li>Gọi hàm : name();</li>
+                </ul>
+            </li>
+            <li class="m-4">
+                <span class="fw-bold">Array (mảng):</span> là một cấu trúc dữ liệu quan trọng trong JS, cho phép lưu trữ nhiều giá trị khác nhau trong biến duy nhất.
+                <ul>
+                    <li>
+                        <span class="fw-bold">Khai báo Array:</span>
+                        <ul>
+                            <li>
+                                const array = new Array(item1,item2,...);
+                            </li>
+                            <li>
+                                const array = [item1,item2,...];
+                            </li>
+                        </ul> 
+                    </li>
+                    <li><span class="fw-bold">Truy cập phần tủ Array </span> theo chỉ mục aray[length-1]:</li>
+                    <li>
+                        <span class="fw-bold">Các phương thức cơ bản của Array</span>
+                        <ul>
+                            <li>
+                                <span class="fw-bold">push: </span> thêm phần tử vào cuối Array.
+                            </li>
+                            <li>
+                                <span class="fw-bold">unshiff: </span> thêm phần tử vào đầu Array.
+                            </li>
+                            <li>
+                                <span class="fw-bold">pop: </span> Gỡ 1 phần tử khỏi đuôi array.
+                            </li>
+                            <li>
+                                <span class="fw-bold">shift: </span>  gỡ 1 phần tử ở đầu Array.
+                            </li>
+                            <li>
+                                <span class="fw-bold">indexof: </span>  chỉ ra vị trí của phần tử trong Array.-1 không tìm thấy và ngc lại.
+                            </li>
+                            <li>
+                                <span class="fw-bold">includes: </span> chỉ ra phần tử có xuất hiện trong Array không ===. Trả về true false.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </li>
+            <li class="m-4">
+                <span class="fw-bold">Object:</span> Array không có cách nào đặt tên cho các phần tử trong Array nhưng Object 
+                quy định các phần tử theo cặp key-value
+                <ul>
+                    <li>
+                        <span class="fw-bold">Khai báo object</span>
+                        <pre>
+                            const person = {
+                                name: 'Dao Nguyen',
+                                age: 26,
+                                address: "Japan",
+                                neiberhood: ["Lao","Campodia","China"]
+                            };
+                        </pre>
+                    </li>
+                    <li>
+                        <span class="fw-bold">Lấy giá trị trong Object:</span> person.name hoặc person['name']
+                    </li>
+                </ul>
+                   
+            </li>
+            <li class="m-4">
+                
+            </li>
+        </ol>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
